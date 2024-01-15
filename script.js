@@ -5,6 +5,7 @@ const percentage=document.getElementById('percentage')
 const remained=document.getElementById('remained')
 updateBigCup()
 
+// this method for when you click cup it will be highlight cup
 smallCups.forEach((cup,idx)=>{
     cup.addEventListener('click',()=>highlightCups(idx))
 })

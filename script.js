@@ -30,26 +30,31 @@ function highlightCups(idx)
     updateBigCup()
 }
 
+// this method for capture all element of big cup
 function updateBigCup(idx){
     const fullCups=document.querySelectorAll('.cup-small.full').length
     const totalCups=smallCups.length
 
+    // this method for it if full cups are 0 then it's not visible & also zero height
     if(fullCups===0)
     {
         percentage.style.visibility='hidden'
         percentage.style.height=0
     }
+    // this method for if cups are full then percentage are visible
     else{
         percentage.style.visibility='visible'
         percentage.style.height=`${fullCups/totalCups * 330}px`
         percentage.innerText = `${fullCups / totalCups * 100}%`
 
     }
-
+    
+// this method for if totalcups are full then visibility is hidden & height zero
     if(fullCups===totalCups){
         remained.style.visibility='hidden'
         remained.style.height=0
     }
+    // if totalcups not equal to fullcups then it will be visible
     else{
         remained.style.visibility='visible'
         Listers.innerText=`${2-(250*fullCups/1000)}`

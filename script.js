@@ -10,7 +10,7 @@ smallCups.forEach((cup,idx)=>{
     cup.addEventListener('click',()=>highlightCups(idx))
 })
 
-
+// this method for if index two are equal or less than total index it will be add full 
 function highlightCups(idx)
 {
     if(smallCups[idx].classList.contains('full')&& !smallCups[idx].nextElementSibling.classList.contains('full'))
